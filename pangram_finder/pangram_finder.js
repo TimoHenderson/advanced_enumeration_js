@@ -4,8 +4,8 @@ const PangramFinder = function (phrase) {
 }
 
 PangramFinder.prototype.isPangram = function () {
-  const lettersInPhrase = this.alphabet.map(letter => this.phrase.includes(letter));
-  return lettersInPhrase.every(letterInPhrase => letterInPhrase === true);
+  return this.alphabet.map(letter => this.phrase.toLowerCase().includes(letter)).every(letterInPhrase => letterInPhrase === true);
+
 
 }
 
